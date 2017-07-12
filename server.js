@@ -25,8 +25,8 @@ app.use((req, res, next) => {
 });
 
 app.use( (req, res, next) => {
-  res.render('maintenance.hbs');
-  // next();
+  // res.render('maintenance.hbs');
+  next();
 });
 
 app.use(express.static(`${__dirname}/public`));
@@ -53,6 +53,20 @@ app.get('/about', (req, res) => {
     title: "About Page",
   });
 });
+
+
+app.get('/contact', (req, res) => {
+  res.render('contact.hbs', {
+    title: "About Page",
+  });
+});
+
+app.get('/map', (req, res) => {
+  res.render('map.hbs', {
+    title: "About Page",
+  });
+});
+
 
 app.get('/bad', (req, res) => {
   res.send({
