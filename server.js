@@ -57,13 +57,19 @@ app.get('/about', (req, res) => {
 
 app.get('/contact', (req, res) => {
   res.render('contact.hbs', {
-    title: "About Page",
+    title: "Contact Page",
   });
 });
 
 app.get('/map', (req, res) => {
   res.render('map.hbs', {
-    title: "About Page",
+    title: "Map Page",
+  });
+});
+
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    title: "Projects Page",
   });
 });
 
